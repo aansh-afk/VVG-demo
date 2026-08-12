@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Inter", "Segoe UI", "Noto Sans Arabic", "Tahoma", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-50/40 text-ink antialiased;
+  }
+
+  /* Arabic reads better with a little more line height and a native stack. */
+  html[dir="rtl"] body {
+    font-family: "Noto Sans Arabic", "Segoe UI", "Tahoma", sans-serif;
+    line-height: 1.85;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-semibold tracking-tight text-brand-900;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply rounded-2xl border border-brand-900/10 bg-white shadow-card;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold
+           transition focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400
+           focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-700 text-white hover:bg-brand-800;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold-400 text-brand-900 hover:bg-gold-300;
+  }
+
+  .btn-ghost {
+    @apply btn border border-brand-900/15 bg-white text-brand-800 hover:border-brand-700 hover:bg-brand-50;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-brand-900/15 bg-white px-3.5 py-2.5 text-sm
+           text-ink placeholder:text-brand-900/35
+           focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-brand-900/60;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold tracking-tight text-brand-900 sm:text-3xl;
+  }
+
+  .prose-body {
+    @apply text-[15px] leading-relaxed text-brand-900/75;
+  }
+
+  /* Logical properties so the shell mirrors correctly in Arabic. */
+  .start-border {
+    @apply border-s-4;
+  }
+
+  /*
+    For user-authored text, which routinely mixes Arabic and Latin in one
+    block. Each paragraph takes its direction from its own first strong
+    character, so an English sentence inside an Arabic page keeps its
+    punctuation at the right end instead of jumping to the far margin.
+  */
+  .bidi-auto {
+    unicode-bidi: plaintext;
+  }
+}
+
+/* Anything the Web Speech API is unavailable for degrades to a plain textarea. */
+.mic-pulse {
+  animation: mic-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes mic-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+}
