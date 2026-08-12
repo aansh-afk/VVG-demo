@@ -1,8 +1,8 @@
 {
-  "name": "wasl-global-franchise-cooperative-portal",
+  "name": "wasl-global-portal",
   "version": "1.0.0",
   "private": true,
-  "description": "WASL Global Franchisee Marketing Cooperative \u2014 bilingual (EN/AR) ERP-style member portal with events, live activities, governance, approvals and AI voice-to-email.",
+  "description": "WASL Global \u2014 bilingual (EN/AR) franchisee marketing cooperative portal: events and live activities, governance, cross-border franchise opportunities, in-platform approvals and an AI voice-to-correspondence composer.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
