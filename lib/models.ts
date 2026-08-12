@@ -1,5 +1,5 @@
 /**
- * Domain model for the VVG Franchisee Marketing Cooperative Portal.
+ * Domain model for the WASL Global Franchisee Marketing Cooperative Portal.
  *
  * Every record is a plain serialisable object so the same shapes work across
  * all three storage drivers (Postgres / JSON file / memory) without mapping.

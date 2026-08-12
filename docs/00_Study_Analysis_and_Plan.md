@@ -1,4 +1,4 @@
-# VVG Franchisee Marketing Cooperative Portal — Study, Analysis and Plan
+# WASL Global Franchisee Marketing Cooperative Portal — Study, Analysis and Plan
 
 Version 1.0 · 12 August 2026
 Protocol followed: **Study → Analyse → Plan → Build → Save → Push → Deploy → Live**
@@ -139,8 +139,8 @@ button hides itself and the field stays an ordinary textarea.
 
 ## 4. Open decisions for the founder
 
-1. **Brand.** "VVG Franchise Cooperative" is used throughout as a working name,
-   with the Arabic rendered as «تعاونية في في جي للامتياز التجاري». Confirm the
+1. **Brand.** "WASL Global" is used throughout as a working name,
+   with the Arabic rendered as «وصل جلوبال». Confirm the
    real name, its Arabic form, the logo and the domain. It is set in one place:
    the `brand` / `brandShort` entries in `lib/i18n.ts`.
 2. **Board data.** Real names, photographs, biographies, mandates, committee

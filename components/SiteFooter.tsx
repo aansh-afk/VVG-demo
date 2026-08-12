@@ -43,7 +43,7 @@ export default async function SiteFooter() {
               aria-hidden
               className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-gold-300 to-gold-500 text-sm font-bold text-brand-900"
             >
-              VVG
+              W
             </span>
             <span className="text-sm font-semibold text-white">{T("brandShort")}</span>
           </div>

@@ -1,4 +1,4 @@
-# VVG Franchisee Marketing Cooperative Portal
+# WASL Global Franchisee Marketing Cooperative Portal
 
 A bilingual (English / Arabic) member portal for a franchise marketing
 cooperative: events and live activities, governance with public board profiles,
@@ -25,8 +25,8 @@ The seeded accounts are also listed on the sign-in page itself.
 
 | Role | Email | Password |
 |---|---|---|
-| Super admin | `admin@vvg-cooperative.org` | `ChangeMe!2026` |
-| Administrator | `events.admin@vvg-cooperative.org` | `Demo!2026` |
+| Super admin | `admin@wasl-global.org` | `ChangeMe!2026` |
+| Administrator | `events.admin@wasl-global.org` | `Demo!2026` |
 | Member | `saad-al-nasser@najd-hospitality-group.example` | `Demo!2026` |
 
 Change `SUPER_ADMIN_EMAIL` / `SUPER_ADMIN_PASSWORD` before going live, and remove

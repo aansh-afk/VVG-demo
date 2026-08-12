@@ -263,7 +263,7 @@ export async function saveEvent(_prev: ActionState, form: FormData): Promise<Act
       endsAt: startsAt + hours * 3_600_000,
       capacity: Math.max(1, Number(str(form, "capacity") || "50")),
       feeSar: Math.max(0, Number(str(form, "feeSar") || "0")),
-      contactEmail: str(form, "contactEmail") || "events@vvg-cooperative.org",
+      contactEmail: str(form, "contactEmail") || "events@wasl-global.org",
     };
 
     if (eventId) {

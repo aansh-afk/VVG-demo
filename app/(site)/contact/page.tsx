@@ -77,10 +77,10 @@ export default async function ContactPage() {
                 <dt className="label">{ar ? "البريد العام" : "General enquiries"}</dt>
                 <dd>
                   <a
-                    href="mailto:info@vvg-cooperative.org"
+                    href="mailto:info@wasl-global.org"
                     className="font-medium text-brand-700 hover:text-brand-900"
                   >
-                    info@vvg-cooperative.org
+                    info@wasl-global.org
                   </a>
                 </dd>
               </div>
@@ -88,10 +88,10 @@ export default async function ContactPage() {
                 <dt className="label">{ar ? "الفعاليات" : "Events"}</dt>
                 <dd>
                   <a
-                    href="mailto:events@vvg-cooperative.org"
+                    href="mailto:events@wasl-global.org"
                     className="font-medium text-brand-700 hover:text-brand-900"
                   >
-                    events@vvg-cooperative.org
+                    events@wasl-global.org
                   </a>
                 </dd>
               </div>
@@ -99,10 +99,10 @@ export default async function ContactPage() {
                 <dt className="label">{ar ? "العضوية" : "Membership"}</dt>
                 <dd>
                   <a
-                    href="mailto:membership@vvg-cooperative.org"
+                    href="mailto:membership@wasl-global.org"
                     className="font-medium text-brand-700 hover:text-brand-900"
                   >
-                    membership@vvg-cooperative.org
+                    membership@wasl-global.org
                   </a>
                 </dd>
               </div>

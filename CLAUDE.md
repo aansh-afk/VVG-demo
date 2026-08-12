@@ -16,7 +16,7 @@ without being asked:
    aesthetic mock-up; always a real MVP that runs.
 5. **Save** — everything into this project folder.
 6. **Push to git** — branch `claude/franchisee-marketing-portal-ngrd74`, repo
-   `aansh-afk/VVG-demo`. Open a draft pull request.
+   `aansh-afk/WASL-Global`. Open a draft pull request.
 7. **Deploy** — prepare everything deploy-ready and deploy where credentials allow.
 8. **Make live** — verify the deployment actually works before reporting done.
 
@@ -106,9 +106,9 @@ A production Next.js build bundles a module **separately into each route**, so
 module-level `let` gives every route its own copy. Two real bugs came from this
 and are fixed the same way — a single global holder:
 
-- `lib/db.ts` — the cache, driver and write queue (`__vvgDb`). Otherwise a write
+- `lib/db.ts` — the cache, driver and write queue (`__waslDb`). Otherwise a write
   in one route is invisible in the next.
-- `lib/auth.ts` — the generated fallback session key (`__vvgSessionSecret`).
+- `lib/auth.ts` — the generated fallback session key (`__waslSessionSecret`).
   Otherwise a cookie signed by one route fails to verify in another.
 
 Keep this in mind before adding any module-level mutable state.

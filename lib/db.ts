@@ -43,7 +43,7 @@ interface DbState {
   queue: Promise<unknown>;
 }
 
-const state: DbState = ((globalThis as typeof globalThis & { __vvgDb?: DbState }).__vvgDb ??= {
+const state: DbState = ((globalThis as typeof globalThis & { __waslDb?: DbState }).__waslDb ??= {
   cache: null,
   driver: null,
   pgPool: null,
@@ -69,7 +69,7 @@ async function initPostgres(): Promise<boolean> {
       max: 3,
     });
     await state.pgPool.query(
-      `CREATE TABLE IF NOT EXISTS vvg_portal_state (
+      `CREATE TABLE IF NOT EXISTS wasl_portal_state (
          id INT PRIMARY KEY,
          doc JSONB NOT NULL,
          updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
@@ -85,7 +85,7 @@ async function initPostgres(): Promise<boolean> {
 
 async function readRaw(): Promise<Database | null> {
   if (state.driver === "postgres") {
-    const res = await state.pgPool.query("SELECT doc FROM vvg_portal_state WHERE id = 1");
+    const res = await state.pgPool.query("SELECT doc FROM wasl_portal_state WHERE id = 1");
     return res.rows[0]?.doc ?? null;
   }
   if (state.driver === "file") {
@@ -101,7 +101,7 @@ async function readRaw(): Promise<Database | null> {
 async function writeRaw(db: Database): Promise<void> {
   if (state.driver === "postgres") {
     await state.pgPool.query(
-      `INSERT INTO vvg_portal_state (id, doc, updated_at) VALUES (1, $1, now())
+      `INSERT INTO wasl_portal_state (id, doc, updated_at) VALUES (1, $1, now())
        ON CONFLICT (id) DO UPDATE SET doc = EXCLUDED.doc, updated_at = now()`,
       [JSON.stringify(db)]
     );

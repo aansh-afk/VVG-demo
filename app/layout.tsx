@@ -5,8 +5,8 @@ import { dir, t } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: {
-    default: "VVG Franchise Cooperative — Member Portal",
-    template: "%s · VVG Franchise Cooperative",
+    default: "WASL Global — Member Portal",
+    template: "%s · WASL Global",
   },
   description:
     "The franchisee marketing cooperative portal: events and live activities, governance, cross-border franchise opportunities, member directory and in-platform approvals. Bilingual English / Arabic.",

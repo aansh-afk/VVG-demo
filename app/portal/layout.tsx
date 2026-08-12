@@ -69,7 +69,7 @@ export default async function PortalLayout({ children }: { children: React.React
               aria-hidden
               className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-gold-300 to-gold-500 text-[11px] font-bold text-brand-900"
             >
-              VVG
+              W
             </span>
             <span className="hidden text-xs font-semibold sm:block">{T("portal_title")}</span>
           </Link>

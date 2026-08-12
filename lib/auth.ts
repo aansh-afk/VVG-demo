@@ -6,8 +6,8 @@ import { Role, User } from "./models";
 
 export { hashPassword, verifyPassword } from "./auth-hash";
 
-const SESSION_COOKIE = "vvg_session";
-const LOCALE_COOKIE = "vvg_locale";
+const SESSION_COOKIE = "wasl_session";
+const LOCALE_COOKIE = "wasl_locale";
 const SESSION_DAYS = 30;
 
 /**
@@ -20,12 +20,12 @@ const SESSION_DAYS = 30;
  * constant would give every route a *different* key and no cookie signed by one
  * route would verify in another.
  */
-const globalKey = globalThis as typeof globalThis & { __vvgSessionSecret?: string };
+const globalKey = globalThis as typeof globalThis & { __waslSessionSecret?: string };
 
 const SECRET =
   process.env.SESSION_SECRET && process.env.SESSION_SECRET.length >= 16
     ? process.env.SESSION_SECRET
-    : (globalKey.__vvgSessionSecret ??= randomBytes(32).toString("hex"));
+    : (globalKey.__waslSessionSecret ??= randomBytes(32).toString("hex"));
 
 /* --------------------------------------------------------------- sessions */
 

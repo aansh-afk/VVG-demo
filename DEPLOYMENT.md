@@ -8,7 +8,7 @@ There is no backend to provision, no account to create, no API key to obtain.
 ## 1. The fastest route — Vercel
 
 1. Go to <https://vercel.com/new>.
-2. Import `aansh-afk/VVG-demo` and pick the branch you want
+2. Import `aansh-afk/WASL-Global` and pick the branch you want
    (`claude/franchisee-marketing-portal-ngrd74`, or `main` once it is merged).
 3. Leave every setting as detected — framework Next.js, root directory `./`,
    build command `next build`. **Add nothing.**

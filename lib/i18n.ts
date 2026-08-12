@@ -7,8 +7,8 @@ import { Bi, Locale } from "./models";
  */
 const DICT = {
   /* brand + chrome */
-  brand: { en: "VVG Franchise Cooperative", ar: "تعاونية في في جي للامتياز التجاري" },
-  brandShort: { en: "VVG Cooperative", ar: "تعاونية VVG" },
+  brand: { en: "WASL Global", ar: "وصل جلوبال" },
+  brandShort: { en: "WASL Global", ar: "وصل جلوبال" },
   tagline: {
     en: "The marketing cooperative connecting franchisors, franchisees and partners across borders.",
     ar: "التعاونية التسويقية التي تربط مانحي الامتياز والممنوحين والشركاء عبر الحدود.",

@@ -45,9 +45,9 @@ export const PURPOSES: Record<string, Purpose> = {
     subjectEn: "Enquiry",
     subjectAr: "استفسار",
     openEn:
-      "I hope this message finds you well. I am writing on behalf of the VVG Franchise Cooperative to enquire about the following matter:",
+      "I hope this message finds you well. I am writing on behalf of WASL Global to enquire about the following matter:",
     openAr:
-      "أرجو أن تصلكم رسالتي وأنتم بأتم الصحة والعافية. أكتب إليكم نيابةً عن تعاونية في في جي للامتياز التجاري للاستفسار عن الموضوع التالي:",
+      "أرجو أن تصلكم رسالتي وأنتم بأتم الصحة والعافية. أكتب إليكم نيابةً عن وصل جلوبال للاستفسار عن الموضوع التالي:",
     closeEn: "We would be grateful for your response at your earliest convenience.",
     closeAr: "ونكون شاكرين لكم تفضلكم بالرد في أقرب وقت ممكن.",
   },
@@ -57,9 +57,9 @@ export const PURPOSES: Record<string, Purpose> = {
     subjectEn: "Invitation",
     subjectAr: "دعوة",
     openEn:
-      "On behalf of the VVG Franchise Cooperative, it is our pleasure to extend the following invitation to you:",
+      "On behalf of WASL Global, it is our pleasure to extend the following invitation to you:",
     openAr:
-      "يسرّنا، نيابةً عن تعاونية في في جي للامتياز التجاري، أن نوجّه إليكم الدعوة التالية:",
+      "يسرّنا، نيابةً عن وصل جلوبال، أن نوجّه إليكم الدعوة التالية:",
     closeEn:
       "Kindly confirm your attendance through the member portal so that we may complete the necessary arrangements.",
     closeAr:
@@ -166,8 +166,8 @@ export function generateDraft(input: DraftInput): Draft {
   const content = paragraphs(tidy(input.transcript));
   const detectedLanguage: Locale = detectArabic(input.transcript) ? "ar" : "en";
 
-  const org = input.organisation?.trim() || "VVG Franchise Cooperative";
-  const orgAr = input.organisation?.trim() || "تعاونية في في جي للامتياز التجاري";
+  const org = input.organisation?.trim() || "WASL Global";
+  const orgAr = input.organisation?.trim() || "وصل جلوبال";
   const signatureEn = [input.senderName, input.senderTitle, org].filter(Boolean).join("\n");
   const signatureAr = [input.senderName, input.senderTitle, orgAr].filter(Boolean).join("\n");
 
@@ -180,7 +180,7 @@ ${purpose.openEn}
 
 ${content}
 
-${purpose.closeEn} Should you wish to reply, please do so through the VVG member portal so that the exchange stays on record.
+${purpose.closeEn} Should you wish to reply, please do so through the WASL Global member portal so that the exchange stays on record.
 
 Kind regards,
 ${signatureEn}`;

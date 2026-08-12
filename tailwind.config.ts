@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // VVG cooperative palette — deep petrol green + heritage gold.
+        // WASL Global palette — deep petrol green + heritage gold.
         brand: {
           50: "#eef6f3",
           100: "#d3e8e0",
